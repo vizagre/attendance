@@ -16,7 +16,7 @@
         if($isSuccess){
             echo '<h1 class="text-center text-success">You have been Registered!</h1>';
         } else {
-            echo '<h1 class="text-center text-danger">There was an error in processing!</h1>';
+            echo '<h1 class="text-center text-danger">There was an error in processing form!</h1>';
         }
     }
 
