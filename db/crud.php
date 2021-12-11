@@ -12,7 +12,7 @@
         public function insert($fname, $lname, $dob, $email, $contact, $specialty){
 
             try {
-                $sql = "INSERT INTO attendee (  firtname, 
+                $sql = "INSERT INTO attendee (  firstname, 
                                                 lastname, 
                                                 dateofbirth, 
                                                 emailaddress, 
@@ -45,6 +45,18 @@
                 return false;
             }
 
+        }
+
+        public function getAttendees(){
+            $sql = "select * from attendee a inner join specialties s on a.specialty_id = s.specialty_id ";
+            $result = $this->db->query($sql);
+            return $result;
+        }
+
+        public function getSpecialties(){
+            $sql = "select * from `specialties`";
+            $result = $this->db->query($sql);
+            return $result;
         }
 
     }
