@@ -4,7 +4,8 @@
 
     if(isset($_GET['$id'])){
 
-        echo 'Error!';
+        include 'includes/errormessage.php';
+        header("Location: viewrecords.php");
     } else {
 
         $id = $_GET['id'];
@@ -14,7 +15,7 @@
         if($isSuccess){
             header("Location: viewrecords.php");
         } else {
-            echo 'Error!';
+            include 'includes/errormessage.php';
         }
     }
 
