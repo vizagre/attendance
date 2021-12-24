@@ -1,6 +1,7 @@
 <?php 
     $title = 'Edit Record';    
     require_once 'includes/header.php'; 
+    require_once 'includes/auth_check.php';
     require_once 'db/conn.php';
 
     if(!isset($_GET['id'])){
@@ -60,7 +61,7 @@
             <small id="phonehelp" class="form-text text-muted">We'll never share your number with anyone else.</small>
         </div>
 
-        <button type="submit" name="submit" class="btn btn-success">Save changes</button>
+        <button type="submit" name="submit" class="btn btn-success btn-block">Save changes</button>
     </form>
 
 </div>

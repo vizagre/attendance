@@ -10,7 +10,6 @@
         }
 
         public function insert($fname, $lname, $dob, $email, $contact, $specialty){
-
             try {
                 $sql = "INSERT INTO attendee (  firstname, 
                                                 lastname, 
@@ -28,14 +27,10 @@
                 $stmt = $this->db->prepare($sql);
                 $stmt->bindparam(':fname', $fname);
                 $stmt->bindparam(':lname', $lname);
+                $stmt->bindparam(':dob',$dob);
                 $stmt->bindparam(':email', $email);
                 $stmt->bindparam(':contact', $contact);
                 $stmt->bindparam(':specialty', $specialty);
-
-                $dp = DateTime::createFromFormat("m/d/Y", $dob);
-                $dpstr = $dp->format('Y-m-d');      
-                          
-                $stmt->bindparam(':dob', $dpstr);
 
                 $stmt->execute();
                 return true;
@@ -125,6 +120,20 @@
                 echo $e->getMessage();
                 return false;
             }
+        }
+
+        public function getSpecialtyById($id){
+            try{
+                $sql = "SELECT * FROM `specialties` where specialty_id = :id";
+                $stmt = $this->db->prepare($sql);
+                $stmt->bindparam(':id', $id);
+                $stmt->execute();
+                $result = $stmt->fetch();
+                return $result;
+            }catch (PDOException $e) {
+                echo $e->getMessage();
+                return false;
+            }            
         }
 
     }

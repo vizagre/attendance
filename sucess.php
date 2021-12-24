@@ -12,9 +12,11 @@
         $specialty = $_POST['specialty'];
 
         $isSuccess = $crud->insert($fname, $lname, $dob, $email, $contact, $specialty);
+        $specialtyName = $crud->getSpecialtyById($specialty);
 
         if($isSuccess){
             include 'includes/successmessage.php';
+            
         } else {
             include 'includes/errormessage.php';
         }
@@ -29,7 +31,7 @@
             </h4>
             
             <h6 class="card-subtitle mb-2 text-muted">
-                <?php echo $_POST['specialty']; ?>
+                <?php echo $specialtyName['name'];  ?>  
             </h6>
 
             <p class="card-text">

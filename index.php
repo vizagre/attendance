@@ -47,7 +47,7 @@
             <small id="phonehelp" class="form-text text-muted">We'll never share your number with anyone else.</small>
         </div>
 
-        <button type="submit" name="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" name="submit" class="btn btn-primary btn-block">Submit</button>
     </form>
 
 </div>
