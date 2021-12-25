@@ -2,6 +2,7 @@
     $title = 'Sucess';    
     require_once 'includes/header.php'; 
     require_once 'db/conn.php';
+    require_once 'sendemail.php';
 
     if(isset($_POST['submit'])){
         $fname = $_POST['firstname'];
@@ -15,6 +16,7 @@
         $specialtyName = $crud->getSpecialtyById($specialty);
 
         if($isSuccess){
+            SendEmail::SendMail($email, 'Welcome to IT Conference 2021', 'You have successfully registerted for this year\'s IT Conference');
             include 'includes/successmessage.php';
             
         } else {
