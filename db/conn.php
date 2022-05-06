@@ -2,7 +2,7 @@
     $host = 'localhost';
     $db = 'attendance_db';
     $user = 'vizagre';
-    $pass = 'P@ssw0rd14031506';
+    $pass = 'P@ssw0rd14031996';
     $charset = 'utf8mb4';
 
     $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
@@ -21,4 +21,3 @@
     $user = new user($pdo);
 
     $user->insertUser("admin", "password");
-?>
