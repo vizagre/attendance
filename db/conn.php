@@ -1,8 +1,8 @@
 <?php
-    $host = 'localhost';
+    $host = 'mysqlpapodev.mysql.database.azure.com';
     $db = 'attendance_db';
     $user = 'vizagre';
-    $pass = 'P@ssw0rd14031996';
+    $pass = 'T3nt@3ss@';
     $charset = 'utf8mb4';
 
     $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
