@@ -47,7 +47,7 @@
                 $stmt->execute();
                 $result = $stmt->fetch();
                 return $result;
-           }catch (PDOException $e) {
+            }catch (PDOException $e) {
                 echo $e->getMessage();
                 return false;
             }
@@ -79,4 +79,3 @@
             }
         }
     }
-?>

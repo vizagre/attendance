@@ -45,13 +45,13 @@
         public function editAttendee($id, $fname, $lname, $dob, $email, $contact, $specialty){
             try {
                 $sql = "UPDATE attendee 
-                        SET    firstname = :fname, 
-                               lastname = :lname, 
-                               dateofbirth = :dob, 
-                               emailaddress = :email, 
-                               contactnumber = :contact, 
-                               specialty_id = :specialty 
-                        WHERE  attendee_id = :id";           
+                        SET firstname = :fname, 
+                            lastname = :lname, 
+                            dateofbirth = :dob, 
+                            emailaddress = :email, 
+                            contactnumber = :contact, 
+                            specialty_id = :specialty 
+                        WHERE attendee_id = :id";           
                         
                 $stmt = $this->db->prepare($sql);
                 $stmt->bindparam(':id', $id);                
@@ -137,5 +137,3 @@
         }
 
     }
-
-?>
