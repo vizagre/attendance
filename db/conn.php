@@ -2,7 +2,7 @@
 $host = 'localhost';
 $db = 'attendance_db';
 $user = 'vizagre';
-$pass = 'P@ssw0rd14031996';
+$pass = 'master123';
 $charset = 'utf8mb4';
 
 $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
